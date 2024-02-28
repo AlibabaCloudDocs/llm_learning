@@ -136,13 +136,7 @@ if __name__ == '__main__':
 
     # extract arguments
     args = parser.parse_args()
-
-    # # define environment
-    # import os
-    # from modelscope.utils.config import Config
-    # key_cfg = Config.from_file("../config/key-configs.json")
-    # os.environ['DASHSCOPE_API_KEY']=key_cfg["DASHSCOPE_API_KEY"]
-
+    
     # define tools
     tool = [SearchTool()]
 

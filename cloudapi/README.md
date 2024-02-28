@@ -196,6 +196,29 @@ Final Answer: 阿里云函数计算服务（Function Compute）的定价模式�
 > Finished chain.
 ```
 
+#### 2.3.4. 封装成文件来执行
+
+上述代码我们封装在文件 aliyun_resource_agent.py 中，你可以使用如下的指令来执行
+
+```bash
+python aliyun_resource_agent.py "我在上海有没有VPC"
+```
+输出内容
+```
+问题：我在上海有没有VPC
+
+> Entering new AgentExecutor chain...
+ 需要查询用户在上海的VPC资源
+Action: 阿里云的云资源查询工具
+Action Input: {"product": "VPC", "resource": "VPC", "region": "cn-shanghai"}
+{'maxResults': 2, 'requestId': '99B869A2-8F8C-53A8-AC0C-F53DD4571BC9', 'resources': [], 'totalCount': 0} 根据查询结果，用户在上海没有VPC资源
+Final Answer: 您在上海没有VPC资源。
+
+> Finished chain.
+您在上海没有VPC资源。
+```
+
+
 ## 3. 参考资料
 - [阿里云控制API](https://api.aliyun.com/product/cloudcontrol?tab=apis)
 - [DashScope](https://dashscope.aliyun.com/)

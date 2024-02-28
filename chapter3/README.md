@@ -211,6 +211,7 @@ search_result
 
 ```python
 from langchain_community.llms import Tongyi
+import json
 
 # 定义模型
 llm = Tongyi()
@@ -287,7 +288,7 @@ class DIYAgent():
             if response_dict.get('final_answer') is not None:
                 return search_input, response_dict['final_answer']
             else:
-                return search_input, "Error in tool"+response_dict
+                return search_input, "Error in tool"+json.dumps(response_dict)
 
         if response_dict['tool'] ==  self.tool_name:
             search_input = response_dict['tool_input']

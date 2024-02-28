@@ -113,7 +113,11 @@ python main_stream.py "为什么要使用阿里云"
 - [DashScope](https://dashscope.aliyun.com/)
 - [LangChain](https://python.langchain.com/docs)
 
+
 *****
+## 本章代码
+请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter1/)查阅相关内容。
+
 ## 继续学习
 - [下一篇：第 2 章 找出网络上两篇文档之间的差异](../chapter2/README.md) 
 - [【通义千问API入门教程】章节目录](../README.md)
