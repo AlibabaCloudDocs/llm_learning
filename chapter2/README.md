@@ -402,7 +402,7 @@ python long-docs/main.py
 
 *****
 ## 本章代码
-请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter2/)查阅相关内容。
+- 请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter2/)查阅相关内容。
 
 ## 继续学习
 - [上一篇：第 1 章 用4行代码实现流式输出](../chapter1/README.md)
