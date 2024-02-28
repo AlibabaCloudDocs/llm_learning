@@ -378,6 +378,9 @@ print(weather_info)
 - [LangChain- 基于语义相似度的路由](https://python.langchain.com/docs/expression_language/cookbook/embedding_router)
 
 *****
+## 本章代码
+请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter4/)查阅相关内容。
+
 ## 继续学习
 - [上一篇：第 3 章 使用工具扩展问答能力的基本原理](../chapter3/README.md)
 - [【通义千问API入门教程】章节目录](../README.md)

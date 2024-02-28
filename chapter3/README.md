@@ -410,6 +410,9 @@ python search-with-tool.py --question="PAI是什么服务"
 - [LangChain](https://python.langchain.com/docs)
 
 *****
+## 本章代码
+请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter3/)查阅相关内容。
+
 ## 继续学习
 - [上一篇：第 2 章 找出网络上两篇文档之间的差异](../chapter2/README.md)
 - [下一篇：第 4 章 让通义千问编写并执行代码](../chapter4/README.md)
