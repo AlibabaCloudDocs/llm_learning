@@ -75,7 +75,7 @@ for chunk in llm.stream('为什么要使用阿里云'):
 
 ### 3.1. 批量输出
 ```bash
-python main_single.py "阿里云是什么时候成立的"
+python main_simple.py "阿里云是什么时候成立的"
 ```
 输出内容
 ```
