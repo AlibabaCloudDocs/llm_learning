@@ -1,0 +1,6 @@
+dashscope==1.13.6
+langchain==0.1.0
+langchainhub==0.1.14
+beautifulsoup4==4.12.2
+openpyxl==3.1.2
+html2text==2020.1.16
