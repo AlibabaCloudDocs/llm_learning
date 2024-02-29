@@ -127,8 +127,10 @@ python more_tools/search-with-tools.py --question="灵积是什么服务"
 
 >ALIBABA_CLOUD_ACCESS_KEY_ID 与 ALIBABA_CLOUD_ACCESS_KEY_SECRET 的导入方法请参考本章前文 [1.2.账号准备]
 
+参考阿里云API，我们实现了阿里云资源查询类[`aliyun_resources.py`](more_tools/aliyun_resources.py)，并用下面定义的`ECSSearch`工具来调用这个类。
 
-阿里云 ECS 资源查询“工具”的代码如下
+出于学习的目的，我们也用langchain接口实现了一个阿里云资源查询工具[`aliyun_resource_tool.py`](refactor_with_langchain/tools/aliyun_resource_tool.py)，并应用于3.1节的场景中，您可以对比这两种实现的异同。
+
 ```python
 # 定义ECS查询工具
 class ECSSearch(BaseTool):
@@ -140,7 +142,7 @@ class ECSSearch(BaseTool):
     )
 
     def _run(self, city: str) -> str:
-        return '这是 json 格式的 ECS 列表信息：' + str(AliyunResources.list_ecs_instances())
+        return '这是 json 格式的 ECS 列表信息：' + str(AliyunResources.get_resource_details())
 ```
 
 这里我们需要额外定义一个类AliyunResources，封装查询阿里云资源的具体方法（暂时不讨论 AliyunResources 类，本段主要目的是展示工具接口定义的基本思路和接口一致性）
@@ -162,7 +164,7 @@ python more_tools/search-with-tools.py --question="我的ECS实例什么时候�
 ```
 ### 2.4. 更多阿里云资源查询方法
 
-使用阿里云的[云控制 API](https://help.aliyun.com/zh/cloud-control-api/)，它可以让你使用风格一致的 API 管理绝大多数阿里云资源。我们写好了一个具体的实现，在 chapter4/refactor_with_langchain/tools/aliyun_resource_tool.py。
+使用阿里云的[云控制 API](https://help.aliyun.com/zh/cloud-control-api/)，它可以让你使用风格一致的 API 管理绝大多数阿里云资源。
 
 你可以尝试运行以下查询：
 

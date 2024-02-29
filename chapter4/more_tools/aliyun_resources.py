@@ -33,7 +33,7 @@ class AliyunResources:
         return cloudcontrol20220830Client(config)
 
     @staticmethod
-    def list_ecs_instances() -> None:
+    def get_resource_details() -> None:
         # 请确保代码运行环境设置了环境变量 ALIBABA_CLOUD_ACCESS_KEY_ID 和 ALIBABA_CLOUD_ACCESS_KEY_SECRET。
         # 工程代码泄露可能会导致 AccessKey 泄露，并威胁账号下所有资源的安全性。以下代码示例使用环境变量获取 AccessKey 的方式进行调用，仅供参考，建议使用更安全的 STS 方式，更多鉴权访问方式请参见：https://help.aliyun.com/document_detail/378659.html
         client = AliyunResources.create_client(os.environ['ALIBABA_CLOUD_ACCESS_KEY_ID'], os.environ['ALIBABA_CLOUD_ACCESS_KEY_SECRET'])
@@ -57,4 +57,4 @@ class AliyunResources:
 
 
 if __name__ == '__main__':
-    AliyunResources.list_ecs_instances()
+    AliyunResources.get_resource_details()

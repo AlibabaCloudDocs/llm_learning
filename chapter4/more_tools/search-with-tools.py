@@ -54,7 +54,7 @@ class ECSSearch(BaseTool):
     )
 
     def _run(self, city: str) -> str:
-        return '这是 json 格式的 ECS 列表信息：' + str(AliyunResources.list_ecs_instances())
+        return '这是 json 格式的 ECS 列表信息：' + str(AliyunResources.get_resource_details())
         
 
 
