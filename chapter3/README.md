@@ -370,7 +370,7 @@ print("最终输出：",result)
 
 ### 4.5.使用封装好的代码来实现服务查询
 
-我们将上述代码重构后封装在文件“search-with-tool.py”中。为了便于后续章节扩展，我们实现了列表式工具加载，与langchain的接口保持一致。
+我们将上述代码重构后封装在文件[`search-with-tool.py`](search-with-tool.py)中。为了便于后续章节扩展，我们实现了列表式工具加载，与langchain的接口保持一致。
   
 列表式工具加载：```tool = [SearchTool()]```
 

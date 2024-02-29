@@ -241,7 +241,8 @@ class AliyunDocLoader(BaseLoader):
         }
         return content_html, metadata
 ```
-完整的代码在 chapter2/custom-loader/ 中。 现在你可以尝试运行一下使用自定义阿里云文档 loader 的对比程序了：
+完整的代码在 [`chapter2/custom-loader/`](custom-loader/) 中。
+现在你可以尝试运行一下使用自定义阿里云文档 loader 的对比程序了：
 ```bash
 python custom-loader/main.py
 ```
@@ -301,8 +302,8 @@ llm.model_name = 'qwen-max-longcontext'
 2. 然后以这些相同的二级标题对文档进行切片；
 3. 对每个切片进行对比，并将结果汇总，得到最终结果。
 
-我们在`chapter2/long-docs/doc_spliter.py`中提供了两个方法，用于找到相同的二级标题，和对文档进行切片。
-另外在`chapter2/long-docs/diff_docs.py`中调整了对比程序的实现，程序会先对第一个文档切片进行对比，然后带着对比结论，对剩余文档切片进行对比，最终遍历完所有的切片时，就得到了最终答案。
+我们在[`chapter2/long-docs/doc_spliter.py`](long-docs/doc_spliter.py)中提供了两个方法，用于找到相同的二级标题，和对文档进行切片。
+另外在[`chapter2/long-docs/diff_docs.py`](long-docs/diff_docs.py)中调整了对比程序的实现，程序会先对第一个文档切片进行对比，然后带着对比结论，对剩余文档切片进行对比，最终遍历完所有的切片时，就得到了最终答案。
 
 这是切片提问模式下的两段提示词：
 ```python

@@ -33,9 +33,9 @@ export ALIBABA_CLOUD_ACCESS_KEY_SECRET="<your access key secret>"
 
 
 ## 2. 搭建能同时使用更多工具的Agent
-第二章的例子，通义千问能够回答"灵积服务是什么"这个原本它无法回答的问题了。如果我们想让通义千问回答更多问题，比如：杭州的天气怎么样？我的ECS实例什么时候到期？
+第二章的例子，通义千问能够回答"灵积服务是什么"这个原本它无法回答的问题了。如果我们想让通义千问回答更多问题，比如：杭州的天气怎么样？我的ECS实例什么时候到期？很明显，目前通义千问是无法回答这些问题的。但是你现在已经知道，给它加两个工具就行了。
 
-很明显，目前通义千问是无法回答这些问题的。但是你现在已经知道，给它加两个工具就行了。
+首先，我们可以尝试自定的方法。我们用第三章自定义的类`DIYAgent`同时加载了三个Agent查询工具，代码在文件[`search-with-tools.py`](more_tools/search-with-tools.py)中，接下来我们演看一下大模型能否自动使用不同工具完成任务。
 
 ### 2.1. 搭建天气查询工具
 天气查询工具的代码如下
@@ -285,6 +285,7 @@ class AutoCodingTool(BaseTool):
 
 
 ### 3.1. 让通义千问自己写代码来实现功能
+我们基于langchain的接口重新定义了一个可以自动写代码完成任务的Agent，代码在文件[`refactor_with_langchain/answer-with-tools.py`](refactor_with_langchain/answer-with-tools.py)中。
 ```bash
 ! python refactor_with_langchain/answer-with-tools.py '加载并列出这个页面的二级标题https://help.aliyun.com/zh/oss/product-overview/what-is-oss'
 ```

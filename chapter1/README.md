@@ -42,6 +42,7 @@ print(llm.invoke('阿里云成立于什么时间'))
 ### 2.2. 流式文本生成
 
 采用LangChain封装的接口来实现流式文本生成，我们需要在创建Tongyi对象时声明采用流式输出（streaming=True），然后用一个循环来接收生成的文本，直到生成的文本为空。
+>（注意：如果你遇到了 TypeError: Additional kwargs key output_tokens already exists in left dict and value has unsupported type <class 'int'> 这个错误，请参考[github](https://github.com/langchain-ai/langchain/pull/16580)中的说明）
 ```python
 from langchain_community.llms import Tongyi
 llm = Tongyi(streaming=True)
