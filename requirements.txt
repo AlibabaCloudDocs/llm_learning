@@ -5,3 +5,4 @@ langchain-experimental==0.0.49
 beautifulsoup4==4.12.2
 html2text==2020.1.16
 alibabacloud_cloudcontrol20220830==1.1.0
+openpyxl==3.1.2
