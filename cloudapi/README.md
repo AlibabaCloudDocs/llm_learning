@@ -228,7 +228,7 @@ Final Answer: 您在上海没有VPC资源。
 
 *****
 ## 本文代码
-- 请点击[实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/cloudapi/demo-cloudapi.ipynb)查阅相关内容。
+- 请点击[实验代码](demo-cloudapi.ipynb)查阅相关内容。
 
 ## 继续学习
 - [【通义千问API入门教程】章节目录](../README.md)

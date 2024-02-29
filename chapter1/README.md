@@ -117,7 +117,7 @@ python main_stream.py "为什么要使用阿里云"
 
 *****
 ## 本章代码
-- 请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter1/)查阅相关内容。
+- 请点击[本章实验代码](demo-chapter1.ipynb)查阅相关内容。
 
 ## 继续学习
 - [下一篇：第 2 章 找出网络上两篇文档之间的差异](../chapter2/README.md) 

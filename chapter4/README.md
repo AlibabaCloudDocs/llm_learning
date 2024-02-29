@@ -382,7 +382,7 @@ print(weather_info)
 
 *****
 ## 本章代码
-- 请点击[本章实验代码](https://github.com/AlibabaCloudDocs/llm_learning/blob/main/chapter4/)查阅相关内容。
+- 请点击[本章实验代码](demo-chapter4.ipynb)查阅相关内容。
 
 ## 继续学习
 - [上一篇：第 3 章 使用工具扩展问答能力的基本原理](../chapter3/README.md)
