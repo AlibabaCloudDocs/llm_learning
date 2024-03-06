@@ -25,12 +25,31 @@ pip install alibabacloud_cloudcontrol20220830==1.1.0
 
 首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)，您可以使用以下命令行导入系统，请于[RAM访问控制](https://ram.console.aliyun.com/manage/ak)查询和创建您的阿里云AK/SK
 
-您可以使用命令行导入系统
+####  MacOS or Linux
+您可以使用以下命令行导入环境变量
 ```bash
 export DASHSCOPE_API_KEY="sk-****"
 export ALIBABA_CLOUD_ACCESS_KEY_ID="<your access key id>"
 export ALIBABA_CLOUD_ACCESS_KEY_SECRET="<your access key secret>"
 ```
+
+#### Windows
+可以在终端使用[`SET`](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/set_1)命令设置环境变量
+```bat
+set DASHSCOPE_API_KEY=sk-****
+set ALIBABA_CLOUD_ACCESS_KEY_ID=your access key id
+set ALIBABA_CLOUD_ACCESS_KEY_SECRET=your access key secret
+```
+或者在[`PowerShell`](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4)中使用以下命令行配置环境变量 
+```powershell
+$Env:DASHSCOPE_API_KEY = "sk-****"
+$Env:ALIBABA_CLOUD_ACCESS_KEY_ID = "<your access key id>"
+$Env:ALIBABA_CLOUD_ACCESS_KEY_SECRET = "<your access key secret>"
+```
+
+#### Jupyter Notebook
+您可以使用[`os.environ`](https://docs.python.org/3/library/os.html)方法，在代码开头设置临时环境变量。
+
 
 ## 2. 搭建云资源查询AGENT
 ### 2.1. 创建阿里云资源查询API工具

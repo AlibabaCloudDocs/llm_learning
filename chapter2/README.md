@@ -1,4 +1,4 @@
-# 第 2 章 找出网络上两篇文档之间的差异
+# 第 2 章 找出两篇文章的不同
 开发一个大模型工具，实现文档内容比对。阿里云的文档工程师们遇到过这样的问题：同一篇文档在中国站和国际站有一些不同，能快速的指出一批文档的这种差异吗？收到这个问题的你起初感到有些犯难，但想到或许可以借助大模型来快速完成这个任务，你又觉得似乎可以很快做到。
 
 本章我们将开发一个程序，该程序可以完成：
@@ -19,10 +19,27 @@ pip install -r requirements.txt
 
 ### 1.2. 账号准备
 
-首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)，您可以使用以下命令行导入系统
+首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)
+
+####  MacOS or Linux
+您可以使用以下命令行导入环境变量
 ```bash
 export DASHSCOPE_API_KEY="sk-****"
 ```
+
+#### Windows
+可以在终端使用[`SET`](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/set_1)命令设置环境变量
+```bat
+set DASHSCOPE_API_KEY=sk-****
+```
+或者在[`PowerShell`](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4)中使用以下命令行配置环境变量 
+```powershell
+$Env:DASHSCOPE_API_KEY = "sk-****"
+```
+
+#### Jupyter Notebook
+您可以使用[`os.environ`](https://docs.python.org/3/library/os.html)方法，在代码开头设置临时环境变量。
+
 
 ## 2. MVP 开发
 在正式开发一个完整的程序之前，我们可以先开发一个最小可运行的程序，来验证一下效果。

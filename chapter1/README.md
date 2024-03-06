@@ -1,4 +1,4 @@
-# 第 1 章 用4行代码实现流式输出
+# 第 1 章 用4行代码与大模型对话
 以前经常使用搜索引擎来解决问题的你，现在大概率已经在工作中频繁使用大模型了。 但是只在网页聊天框中和大模型对话，终究有一些局限性：比如你在本地有一个超大的用户反馈表格、或者是有一些仅内部可访问的网页，想要借助大模型做一系列处理，就不太好做到了。 幸运的是，现在很多大模型服务提供商，都提供了 API 接口，可以让你方便地实现各种原本在网页聊天框中不方便、或无法实现的功能。
 
 本章将通过一个简单的例子，让你快速进入到大模型应用开发的世界。
@@ -16,10 +16,27 @@ pip install -r requirements.txt
 
 ### 1.2. 账号准备
 
-首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)，您可以使用以下命令行导入系统
+首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)
+
+####  MacOS or Linux
+您可以使用以下命令行导入环境变量
 ```bash
 export DASHSCOPE_API_KEY="sk-****"
 ```
+
+#### Windows
+可以在终端使用[`SET`](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/set_1)命令设置环境变量
+```bat
+set DASHSCOPE_API_KEY=sk-****
+```
+或者在[`PowerShell`](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4)中使用以下命令行配置环境变量 
+```powershell
+$Env:DASHSCOPE_API_KEY = "sk-****"
+```
+
+#### Jupyter Notebook
+您可以使用[`os.environ`](https://docs.python.org/3/library/os.html)方法，在代码开头设置临时环境变量。
+
 
 ## 2. 文本生成实验
 

@@ -18,10 +18,26 @@ pip install -r requirements.txt
 
 ### 1.2. 账号准备
 
-首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)，您可以使用以下命令行导入系统
+首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)
+
+####  MacOS or Linux
+您可以使用以下命令行导入环境变量
 ```bash
 export DASHSCOPE_API_KEY="sk-****"
 ```
+
+#### Windows
+可以在终端使用[`SET`](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/set_1)命令设置环境变量
+```bat
+set DASHSCOPE_API_KEY=sk-****
+```
+或者在[`PowerShell`](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4)中使用以下命令行配置环境变量 
+```powershell
+$Env:DASHSCOPE_API_KEY = "sk-****"
+```
+
+#### Jupyter Notebook
+您可以使用[`os.environ`](https://docs.python.org/3/library/os.html)方法，在代码开头设置临时环境变量。
 
 ## 2. 快速开始
 ### 2.1. 与Qwen-MAX直接对话

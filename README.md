@@ -8,10 +8,10 @@
 ## 教程目录
 | 章节                              | Demos                  | 目标                                                       | 
 |:-----------------------------------|:------------------------|:---------------------------------------------------------|
-| [第 1 章 用4行代码实现流式输出](chapter1/README.md)              |[Demo 1](chapter1/demo-chapter1.ipynb)      | 了解如何通过 API 使用通义千问                                        |
-| [第 2 章 找出网络上两篇文档之间的差异](chapter2/README.md) |[Demo 2](chapter2/demo-chapter2.ipynb)  | 以对比阿里云中国站和国际站文档这个场景为例，让大模型对文档做对比和总结 |
-| [第 3 章 使用工具扩展问答能力的基本原理](chapter3/README.md) |[Demo 3](chapter3/demo-chapter3.ipynb) | 了解如何让大模型使用外部工具，以及背后的工作原理。                                 |
-| [第 4 章 让通义千问编写并执行代码](chapter4/README.md) |[Demo 4](chapter4/demo-chapter4.ipynb)  | 了解如何添加更多工具，以及让大模型自己写代码来执行工作。    |
+| [第 1 章 用4行代码与大模型对话](chapter1/README.md)              |[Demo 1](chapter1/demo-chapter1.ipynb)      | 了解如何通过 API 使用通义千问                                        |
+| [第 2 章 找出两篇文章的不同](chapter2/README.md) |[Demo 2](chapter2/demo-chapter2.ipynb)  | 以对比阿里云中国站和国际站文档这个场景为例，让大模型对文档做对比和总结 |
+| [第 3 章 让大模型使用各种工具](chapter3/README.md) |[Demo 3](chapter3/demo-chapter3.ipynb) | 了解如何让大模型使用外部工具，以及背后的工作原理。                                 |
+| [第 4 章 让大模型写代码和跑代码](chapter4/README.md) |[Demo 4](chapter4/demo-chapter4.ipynb)  | 了解如何添加更多工具，以及让大模型自己写代码来执行工作。    |
 
 ## 代码安装
 

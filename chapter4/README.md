@@ -1,4 +1,4 @@
-# 第 4 章 让通义千问编写并执行代码
+# 第 4 章 让大模型写代码和跑代码
 基于前面三章的铺垫，本章我们将展示大模型Agent的强大能力。我们不仅要实现让大模型同时使用多种查询工具，还要实现让大模型能查询天气情况，最后让大模型自己写代码来查询天气情况。
 
 在前面的学习中，你已经尝试让大模型学会了使用一个工具，来回答原本不能回答的问题。但是你可能会发现，实际问题中你需要更多的工具：
@@ -24,12 +24,32 @@ pip install -r requirements.txt
 
 首先，您需要前往 [官网创建 API Key](https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key)。接下来，请获取你的 [DASHSCOPE_API_KEY](https://dashscope.console.aliyun.com/apiKey)，请于[RAM访问控制](https://ram.console.aliyun.com/manage/ak)创建和查询您的阿里云AK/SK。
 
-您可以使用以下命令行导入系统
+####  MacOS or Linux
+您可以使用以下命令行导入环境变量
 ```bash
 export DASHSCOPE_API_KEY="sk-****"
 export ALIBABA_CLOUD_ACCESS_KEY_ID="<your access key id>"
 export ALIBABA_CLOUD_ACCESS_KEY_SECRET="<your access key secret>"
 ```
+
+#### Windows
+可以在终端使用[`SET`](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/set_1)命令设置环境变量
+```bat
+set DASHSCOPE_API_KEY=sk-****
+set ALIBABA_CLOUD_ACCESS_KEY_ID=your access key id
+set ALIBABA_CLOUD_ACCESS_KEY_SECRET=your access key secret
+```
+或者在[`PowerShell`](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4)中使用以下命令行配置环境变量 
+```powershell
+$Env:DASHSCOPE_API_KEY = "sk-****"
+$Env:ALIBABA_CLOUD_ACCESS_KEY_ID = "<your access key id>"
+$Env:ALIBABA_CLOUD_ACCESS_KEY_SECRET = "<your access key secret>"
+```
+
+#### Jupyter Notebook
+您可以使用[`os.environ`](https://docs.python.org/3/library/os.html)方法，在代码开头设置临时环境变量。
+
+
 
 
 ## 2. 搭建能同时使用更多工具的Agent
