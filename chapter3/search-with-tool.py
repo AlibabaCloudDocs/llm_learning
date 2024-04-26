@@ -34,7 +34,7 @@ prompt_template = '''你是一个可以回答任何问题的助手。
 {tools}
 
 为了使用这个工具，你必须用<tool></tool>和<tool_input></tool_input>标签。
-例如，如果您有一个名为“{tool1}”的工具，可以查询企业内部服务信息，为了搜索阿里云是什么服务，你会返回：
+例如，如果您有一个名为“{tool1}”的工具，可以查询企业内部服务信息，为了搜索(阿里云)是什么服务，你会返回：
 <tool>{tool1}</tool><tool_input>阿里云</tool_input>
 
 使用工具后你会得到一个形式为<observation></observation>的响应，因此在第二轮你会得到输入为
