@@ -1,3 +1,7 @@
 .DS_Store
 chapter4/more_tools/__pycache__/aliyun_resources.cpython-39.pyc
 chapter2/utils/__pycache__/ds_util.cpython-39.pyc
+chapter4/refactor_with_langchain/tools/__pycache__/service_search_tool.cpython-39.pyc
+chapter4/refactor_with_langchain/tools/__pycache__/auto_coding_tool.cpython-39.pyc
+chapter4/refactor_with_langchain/tools/__pycache__/aliyun_resource_tool.cpython-39.pyc
+chapter4/refactor_with_langchain/tools/__pycache__/__init__.cpython-39.pyc
